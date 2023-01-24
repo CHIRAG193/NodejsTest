@@ -1,3 +1,4 @@
+
 const express=require('express');
 const app=express()
 
@@ -29,16 +30,19 @@ const users = [
     }
 ];
 
-getUsersInState(users, state)
-{
-    users.find((users.state,index)=>{
+const getUsersInState=function(users,state){
+    const ans=users.map(function(users,index){
         
-         console.log( [ users.id,users.name,users.email,users.age,users.city,users.state])
-        
+        if(users.state==state)
+        {
+            console.log(users)
+        }
     })
-
+    return ans;
 }
-getUsersInState(users,'NY');
+getUsersInState(users,'NY')
+
+
 const port=process.env.port || 3000;
 app.listen(port,()=>{
     console.log(`server is running  on${port}`)
