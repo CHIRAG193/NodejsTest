@@ -31,7 +31,7 @@ const users = [
 
 getUsersInState(users, state)
 {
-    users.find((state,index)=>{
+    users.find((users.state,index)=>{
         
          console.log( [ users.id,users.name,users.email,users.age,users.city,users.state])
         
